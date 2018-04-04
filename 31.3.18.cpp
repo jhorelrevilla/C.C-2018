@@ -118,7 +118,7 @@ int main()
     int aniobi;
     cout<<"ingresa año: ";cin>>aniobi;
 
-    if(!(aniobi%4) && aniobi%400 && aniobi%100){
+    if(!(aniobi%4) && (aniobi%400 || aniobi%100)){
         cout<<"es bisiesto"<<endl;
     }
     else
