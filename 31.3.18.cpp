@@ -68,10 +68,10 @@ int main()
     //////////5//////////////
     int prim;
     cout<<"num primo: ";cin>>prim;
-    if(prim==2 || prim==3 || prim==5 || prim==7){
+    if(prim==2 || prim==3 || prim==5 || prim==7 || prim==11){
         cout<<"es primo"<<endl;
     }
-    if(prim%2!=0 && prim%3!=0 && prim%5!=0 && prim%7!=0){
+    if(prim%2!=0 && prim%3!=0 && prim%5!=0 && prim%7!=0 && prim%11!=0){
         cout<<"es primo"<<endl;
     }
     else
@@ -80,10 +80,10 @@ int main()
     int num_prim;
     cin>>num_prim;
     for(int x=2;x<=num_prim;++x){
-        if(x==2 || x==3 || x==5 || x==7){
+        if(x==2 || x==3 || x==5 || x==7 || x==11){
             cout<<x<<" ";
         }
-        if(x%2!=0 && x%3!=0 && x%5!=0 && x%7!=0){
+        if(x%2!=0 && x%3!=0 && x%5!=0 && x%7!=0 && x%11!=0){
             cout<<x<<" ";
         }
     }
@@ -121,7 +121,7 @@ int main()
      }
     //////////9//////////////
     int aniobi;
-    cout<<"ingresa año: ";cin>>aniobi;
+    cout<<"ingresa aÃ±o: ";cin>>aniobi;
     if(aniobi%4==0){
         cout<<"es bisiesto"<<endl;
     }
