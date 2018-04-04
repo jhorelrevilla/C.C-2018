@@ -117,16 +117,12 @@ int main()
     //////////9//////////////
     int aniobi;
     cout<<"ingresa año: ";cin>>aniobi;
-    if(aniobi%4 && aniobi%400){
+
+    if(!(aniobi%4) && aniobi%400 && aniobi%100){
         cout<<"es bisiesto"<<endl;
-    }
-    if(!(aniobi%100)){
-        cout<<"no es bisiesto"<<endl;
     }
     else
         cout<<"no es bisiesto"<<endl;
-
-
     //////////10//////////////
     int fibo;
     int contant=1;
