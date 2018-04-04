@@ -76,13 +76,10 @@ int main()
         cout<<"no es primo"<<endl;
     //////////6//////////////
     int num_prim;
-    cin>>num_prim;
+    cout<<"num de primos";cin>>num_prim;
     for(int x=2;x<=num_prim;++x){
-        if(x==2 || x==3 || x==5 || x==7 || x==11){
-            cout<<x<<" ";
-        }
-        if(x%2!=0 && x%3!=0 && x%5!=0 && x%7!=0 && x%11!=0){
-            cout<<x<<" ";
+        if(x%2 && x%3 && x%5 && x%7 && x%11 || x==2 || x==3 || x==5 || x==7 || x==11){
+            cout<<x<<" "<<endl;
         }
     }
     //////////7//////////////
