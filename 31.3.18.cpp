@@ -68,14 +68,12 @@ int main()
     //////////5//////////////
     int prim;
     cout<<"num primo: ";cin>>prim;
-    if(prim==2 || prim==3 || prim==5 || prim==7 || prim==11){
-        cout<<"es primo"<<endl;
-    }
-    if(prim%2!=0 && prim%3!=0 && prim%5!=0 && prim%7!=0 && prim%11!=0){
+
+    if(prim%2 && prim%3 && prim%5 && prim%7 && prim%11 || prim==2 || prim==3 || prim==5 || prim==7 || prim==11){
         cout<<"es primo"<<endl;
     }
     else
-        cout<<" no es primo"<<endl;
+        cout<<"no es primo"<<endl;
     //////////6//////////////
     int num_prim;
     cin>>num_prim;
