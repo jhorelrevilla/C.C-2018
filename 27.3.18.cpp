@@ -1,114 +1,166 @@
 #include <iostream>
 
 using namespace std;
-void may(float a,float b,float c,float d,float e){
-    int may=0;
+
+
+bool calcuedad(int edad){
+    (edad>0  && edad<30)? true:false;
+}
+
+void impnum(int numhf){
+    for(int x=1;x<=numhf;++x){
+        if(x<numhf){
+            cout<<x<<",";
+        }
+        if(x==numhf){
+            cout<<x;
+        }
+    }
+}
+
+void promnu(int a,int b, int c, int &mayor, int &menor,float &promedio){
+    promedio=(a+b+c)/3;
     if(a>b){
-        may=a;
+        mayor=a;
     }
-    else
-        may=b;
-    if(c>may){
-        may=c;
+    else{
+        mayor=b;
     }
-    if(d>may){
-        may=d;
+    if(c>mayor){
+        mayor=c;
     }
-    if(e>may){
-        may=e;
-    }
-    cout<<"mayor    "<<may<<endl;
-}
-
-void men(float a,float b,float c,float d,float e){
-    float may=0;
+    ////////
     if(a<b){
-        may=a;
+        menor=a;
     }
-    else
-        may=b;
-    if(c<may){
-        may=c;
+    else{
+        menor=b;
     }
-    if(d<may){
-        may=d;
+    if(c<menor){
+        menor=c;
     }
-    if(e<may){
-        may=e;
-    }
-    cout<<"menor    "<<may<<endl;
+
 }
 
+char* multi2(int num1,int num2){
+    if(num1%2==0){
+        return "el primer numero es multiplo de 2";
+    }
+    if(num2%2==0){
+        return "el segundo numero es multiplo de 2";
+        }
+    if(num1%num2==0){
+        return "el primer numero es multiplo del segundo";
+    }
+    else
+        return "el primer numero no es multiplo del segundo";
+    if((num1*num1)==num2){
+        return "el primero al cuadrado es igual al segundo";
+    }
+}
 
+char* prim(int n){
+    int a=0;
+    for(int i=1;i<(n+1);i++){
+        if(n%i==0){
+            a++;
+        }
+    }
+    if(a!=2){
+        return "No es Primo";
+    }else{
+        return "Si es Primo";
+    }
+}
+void return_prim(int n){
+    int a=0,i;
+    for(i=1;i<(n+1);i++){
+        if(n%i==0){
+            a++;
+        }
+    }
+    if(a==2){
+        cout<<n<<endl;
+    }
+}
+void numprim(int num){
+    for(int i=2;i<=num;++i){
+        return_prim(i);
+    }
+}
+void numtab(int numtab=0){
+    if(numtab<=99999){
+        int x1=numtab%10;
+        int x2=numtab%100/10;
+        int x3=numtab%1000/100;
+        int x4=numtab%10000/1000;
+        int x5=numtab%100000/10000;
+        cout<<x5<<"\t"<<x4<<"\t"<<x3<<"\t"<<x2<<"\t"<<x1<<endl;
+    }
+    else
+        cout<<"es un numero mayor a 5 digitos"<<endl;
+}
+char*  palindrome(int num_palin=0){
+    int cont=0;
+     if(num_palin<=99999){
+        int x1=num_palin%10;
+        int x2=num_palin%100/10;
+        int x4=num_palin%10000/1000;
+        int x5=num_palin%100000/10000;
+        if(x1==x5){
+            cont+=1;
+        }
+        if(x2==x4){
+            cont+=1;
+        }
+        if(cont>=2){
+            return "es palindrome";
+        }
+        else{
+            return " no es palindrome";
+        }
+     }
+}
+char* aniobi(int aniobi){
+    if(!(aniobi%4) && (aniobi%400 || aniobi%100)){
+        return "es bisiesto";
+    }
+    else
+        return "no es bisiesto";
+}
+void fibona(int fibo,int &total){
+    int contant=1;
+    int contact=0;
+    for(int x=0;x<fibo;++x){
+        total=contant+contact;
+        contant=contact;
+        contact=total;
+    }
+}
+int main()
+{
+    int mayor;
+    int menor;
+    float promedio;
+    promnu(1,2,3,mayor,menor,promedio);
+    cout<<mayor<<endl;
+    cout<<menor<<endl;
+    cout<<promedio<<endl;
+    /*
+    int x;
+    calcuedad();
+    impnum();
+    cout<<"\n";
 
-int main(){
-    //////////////1._///////////////
-    int p;
-    int r;
-    /*int q;
-    int w;
-    int e;
+    multi2();
+    prim();
+    cout<<"calcular numero primo hasta: ";cin>>x;
+    numprim(x);
+    numtab();
+    palindrome();
+    aniobi();
+    fibona();
     */
-    cout<<"1 ";cin>>p;
-    cout<<"2 ";cin>>r;
-    /*cout<<"3 ";cin>>q;
-    cout<<"4 ";cin>>w;
-    cout<<"5 ";cin>>e;
-    //may(p,r,q,w,e);
-    //men(p,r,q,w,e);
-    if(p%2){
-        cout<<p<<" es impar"<<endl;
-    }
-    else
-        cout<<p<<" es par"<<endl;
-        //////////////
-    if(r%2){
-        cout<<r<<" es impar"<<endl;
-    }
-    else
-        cout<<r<<" es par"<<endl;
-        //////////////
-    if(q%2){
-        cout<<q<<" es impar"<<endl;
-    }
-    else
-        cout<<q<<" es par"<<endl;
-        //////////////
-    if(w%2){
-        cout<<w<<" es impar"<<endl;
-    }
-    else
-        cout<<w<<" es par"<<endl;
-        //////////////
-    if(e%2){
-        cout<<e<<" es impar"<<endl;
-    }
-    else
-        cout<<e<<" es par"<<endl;
-    */
-    if(p%r==0){
-        cout<<p<<" es multiplo de "<<r<<endl;
-    }
-    else
-        cout<<p<<" no es multiplo de "<<r<<endl;
-    if(r%p==0){
-        cout<<r<<" es multiplo de "<<p<<endl;
-    }
-    else
-        cout<<r<<" no es multiplo de "<<p<<endl;
-
-
-
-    /*int z=x%y;
-    int a=x/y;
-    cout<<"z "<<z<<endl;
-    cout<<"a "<<a<<endl;
-    //////////////2._///////////////
-    int m=p*r%q+w/x-y;//el que tiene mayor precedencia(),*,/,%,+,-.
-    cout<<m<<endl;*/
-
-
-
+    //cout<<pal();
     return 0;
 }
-
