@@ -133,6 +133,9 @@ void palindrome(){
         if(cont>=2){
             cout<<"es palindrome"<<endl;
         }
+        else{
+            cout<<" no es palindrome"<<endl;
+        }
      }
 }
 void aniobi(){
