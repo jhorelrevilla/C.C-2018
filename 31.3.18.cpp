@@ -97,7 +97,7 @@ void return_prim(int n){
     }
 }
 void numprim(int num){
-    for(int i=2;i<num;++i){
+    for(int i=2;i<=num;++i){
         return_prim(i);
     }
 }
