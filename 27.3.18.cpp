@@ -59,7 +59,7 @@ char* multi2(int num1,int num2){
     }
 }
 
-char* prim(int n){
+bool prim(int n){
     int a=0;
     for(int i=1;i<(n+1);i++){
         if(n%i==0){
@@ -67,9 +67,9 @@ char* prim(int n){
         }
     }
     if(a!=2){
-        return "No es Primo";
+        return 1;
     }else{
-        return "Si es Primo";
+        return 0;
     }
 }
 void return_prim(int n){
