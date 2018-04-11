@@ -100,7 +100,7 @@ void numtab(int numtab=0){
     else
         cout<<"es un numero mayor a 5 digitos"<<endl;
 }
-char*  palindrome(int num_palin=0){
+bool  palindrome(int num_palin=0){
     int cont=0;
      if(num_palin<=99999){
         int x1=num_palin%10;
@@ -114,19 +114,19 @@ char*  palindrome(int num_palin=0){
             cont+=1;
         }
         if(cont>=2){
-            return "es palindrome";
+            return 1;
         }
         else{
-            return " no es palindrome";
+            return 0;
         }
      }
 }
-char* aniobi(int aniobi){
+bool aniobi(int aniobi){
     if(!(aniobi%4) && (aniobi%400 || aniobi%100)){
-        return "es bisiesto";
+        return 1;
     }
     else
-        return "no es bisiesto";
+        return 0;
 }
 void fibona(int fibo,int &total){
     int contant=1;
