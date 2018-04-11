@@ -137,6 +137,12 @@ void fibona(int fibo,int &total){
         contact=total;
     }
 }
+void Factorial(int num,int total=1){
+    for(int i=1;i<num+1;i++){
+        total*=i;
+    }
+    cout<<"total "<<total;
+}
 int main()
 {
     int mayor;
