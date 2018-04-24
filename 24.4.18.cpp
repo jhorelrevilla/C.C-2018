@@ -43,7 +43,7 @@ int tam_a(char a[]){
 }
 ////////////////////////4
 void str_cp(char a[],char b[]){
-    for(int i=0;i<(tam_a(a));i++){
+    for(int i=0;a[i]!='\0';i++){
         b[i]=a[i];
     }
 }
