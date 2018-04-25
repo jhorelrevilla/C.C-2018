@@ -48,15 +48,12 @@ void str_cp(char a[],char b[]){
     }
 }
 ////////////////////////5
-void str_cat(char a[],char b[]){
-    for(int i=0;i<tam_a(b)-1;i++){
-        if(a[i]!="\n"){
-            for(int j=0;j<tam_a(a);j++){
-                b[j]=a[j];
-            }
-        }
+void strcat(char s[],char t[]){
+    int a;
+    for(int i=0;t[i]!='\0';i++){
+        a=tam_a(s);
+        s[a]+=t[i];
     }
-
 }
 int main()
 {
