@@ -45,7 +45,7 @@ void charvirt::agregar(int valor){
     for(int i=0;i<tamanio;i++){
         nuevo[i]=a[i];   
     }
-    a[tamanio-1]=valor;
+    nuevo[tamanio-1]=valor;
     delete [] a;
-    *a=*nuevo;
+    a=nuevo;
 }
