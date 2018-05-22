@@ -13,7 +13,7 @@ void charvirt::rellenar(){
     }
 }
 int charvirt::imprimir(){
-    for(int i=0;i<tamanio;i++){
+    for(int i=0;i<=tamanio;i++){
         cout<<a[i];
     }
 }
