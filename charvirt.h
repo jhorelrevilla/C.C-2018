@@ -10,6 +10,7 @@ class charvirt
         int imprimir();
         void borrar(int);
         void agregar(int);
+        void agregarpos(int, int);
         int *a;
         int tamanio=0;
 };
