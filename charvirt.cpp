@@ -29,7 +29,12 @@ void charvirt::anular(){
     delete [] a;   
 }  
 void charvirt::agregar(int valor){
-    tamanio++;
+    int *nuevo= new int [tamanio+1];
+    for(int i=0;i<tamanio;i++){
+        nuevo[i]=a[i];   
+    }
     a[tamanio-1]=valor;
+    tamanio++;
+    *a=*nuevo;
 
 }
