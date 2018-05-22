@@ -30,11 +30,11 @@ void charvirt::anular(){
 }  
 void charvirt::agregar(int valor){
     int *nuevo= new int [tamanio+1];
+    tamanio++;
     for(int i=0;i<tamanio;i++){
         nuevo[i]=a[i];   
     }
     a[tamanio-1]=valor;
-    tamanio++;
+    delete [] a;
     *a=*nuevo;
-
 }
