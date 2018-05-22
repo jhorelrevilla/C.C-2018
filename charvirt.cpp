@@ -26,6 +26,7 @@ void charvirt::borrar(int posicion){
     }
 }
 void charvirt::anular(){
+    tamanio=0;
     delete [] a;   
 }  
 void charvirt::agregar(int valor){
