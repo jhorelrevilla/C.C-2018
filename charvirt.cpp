@@ -25,6 +25,16 @@ void charvirt::borrar(int posicion){
         tamanio--;
     }
 }
+void charvirt::agregarpos(int elem, int post){
+    int *nuevo=new int [tamanio+1];
+    tamanio++;
+    for(int i=post;i<tamanio;i++){
+       a[i]=a[i+1];
+    }
+    a[tamanio-post]=elem;
+    delete [] a;
+    *a=*nuevo;
+}
 void charvirt::anular(){
     tamanio=0;
     delete [] a;   
