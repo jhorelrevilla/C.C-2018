@@ -5,12 +5,13 @@
 class charvirt
 {
     public:
-        charvirt(int);
-        void rellenar();
+        charvirt(int b ,int *arraya);
         int imprimir();
         void borrar(int);
+        void vacear();
         void agregar(int);
         void agregarpos(int, int);
+        ~charvirt();
         int *a;
         int tamanio=0;
 };
