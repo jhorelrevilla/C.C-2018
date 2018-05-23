@@ -2,50 +2,57 @@
 #include <iostream>
 using namespace std;
 
-charvirt::charvirt(int b)
-{
+charvirt::charvirt(int b,int *arraya){
     tamanio=b;
-    a= new int[tamanio];
+    a= arraya;
 }
-void charvirt::rellenar(){
-    for(int i=0;i<tamanio;i++){
-        cin>>a[i];
-    }
-}
+
 int charvirt::imprimir(){
-    for(int i=0;i<=tamanio;i++){
+    for(int i=0;i<tamanio;i++){
         cout<<a[i];
     }
 }
 void charvirt::borrar(int posicion){
-    if(posicion<=tamanio){
-        for(int i=posicion;i<tamanio;i++){
-            a[i]=a[i+1];
-        }
-        tamanio--;
+    int *nuevo= new int [tamanio-1];
+    tamanio--;
+    for(int i=0;i<posicion;i++){
+        nuevo[i]=a[i];
     }
-}
-void charvirt::agregarpos(int elem, int post){
-    int *nuevo=new int [tamanio+1];
-    tamanio++;
-    for(int i=post;i<tamanio;i++){
-       a[i]=a[i+1];
+    for(int i=posicion;i<tamanio;i++)
+    {
+        nuevo[i]=a[i+1];
     }
-    a[tamanio-post]=elem;
     delete [] a;
-    *a=*nuevo;
+    a=nuevo;
 }
-void charvirt::anular(){
+void charvirt::vacear(){
+    delete [] a;
     tamanio=0;
-    delete [] a;   
-}  
+}
 void charvirt::agregar(int valor){
     int *nuevo= new int [tamanio+1];
     tamanio++;
     for(int i=0;i<tamanio;i++){
-        nuevo[i]=a[i];   
+        nuevo[i]=a[i];
     }
     nuevo[tamanio-1]=valor;
     delete [] a;
     a=nuevo;
+}
+
+void charvirt::agregarpos(int elem, int pos){
+    int *nuevo= new int [tamanio+1];
+    tamanio++;
+    for(int i=0;i<pos;i++){
+        nuevo[i]=a[i];
+    }
+    for(int i=pos;i<tamanio;i++){
+        nuevo[i+1]=a[i];
+    }
+    nuevo[pos]=elem;
+    delete [] a;
+    a=nuevo;
+}
+charvirt::~charvirt(){
+    delete []a;
 }
