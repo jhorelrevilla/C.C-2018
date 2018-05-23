@@ -1,18 +1,21 @@
 #include <iostream>
-#include <charvirt.h>
+#include "charvirt.h"
 using namespace std;
 
 int main()
 {
-    charvirt a(5);
-    a.rellenar();
-    cout<<"\n";
-    a.imprimir();
-    a.borrar(0);
-    cout<<"\n";
+    int arr[]={1,2,3,4,5};
+
+    charvirt a(5,arr);
     a.imprimir();
     cout<<"\n";
-    a.agregar(0);
+    a.agregar(7);
     a.imprimir();
+    cout<<"\n";
+    a.agregarpos(6,3);
+    cout<<"\n";
+    a.imprimir();
+    a.borrar(7);
+
     return 0;
 }
