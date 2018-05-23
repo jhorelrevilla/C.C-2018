@@ -55,6 +55,33 @@ void charvirt::agregarpos(int elem, int pos){
     delete [] a;
     a=nuevo;
 }
+int charvirt::Obtenermayor(){
+    int mayor=a[0];
+    for(int i=0;i<tamanio;i++){
+        if(mayor<=a[i]){
+            mayor=a[i];
+        }
+    }
+    return mayor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 charvirt::~charvirt(){
     delete []a;
 }
