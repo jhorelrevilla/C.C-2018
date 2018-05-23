@@ -26,7 +26,9 @@ void charvirt::borrar(int posicion){
     a=nuevo;
 }
 void charvirt::vacear(){
+    int *nuevo= new int[0];
     delete [] a;
+    a=nuevo;
     tamanio=0;
 }
 void charvirt::agregar(int valor){
