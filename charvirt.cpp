@@ -65,7 +65,7 @@ void charvirt::ordenarnotas(){
 }
 bool charvirt::prim(int a){
     int prim1=0;
-    for(int i=1;i<=a;i++){
+    for(int i=2;i<=a;i++){
         if(a%i==0){
             prim1++;
         }
