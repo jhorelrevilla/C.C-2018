@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1528172177 source:c:\users\jhorel\desktop\trabajofinal\src\persona.cpp
+	"Persona.h"
+
+1528172018 c:\users\jhorel\desktop\trabajofinal\include\persona.h
+	<iostream>
+	<string>
+
+1528169286 source:c:\users\jhorel\desktop\trabajofinal\main.cpp
+	<iostream>
+	"Controller.h"
+	<windows.h>
+
+1528171458 source:c:\users\jhorel\desktop\trabajofinal\src\controller.cpp
+	"Controller.h"
+
+1528169286 c:\users\jhorel\desktop\trabajofinal\include\controller.h
+	<iostream>
+	<string>
+	"Model.h"
+
+1528166485 c:\users\jhorel\desktop\trabajofinal\include\model.h
+	<iostream>
+	"View.h"
+	"Hospital.h"
+
+1528062715 c:\users\jhorel\desktop\trabajofinal\include\view.h
+
+1528172062 c:\users\jhorel\desktop\trabajofinal\include\hospital.h
+	"Persona.h"
+	<string>
+	<iostream>
+
+1528172476 source:c:\users\jhorel\desktop\trabajofinal\src\hospital.cpp
+	"Hospital.h"
+
+1528064721 source:c:\users\jhorel\desktop\trabajofinal\src\model.cpp
+	"Model.h"
+
+1528062715 source:c:\users\jhorel\desktop\trabajofinal\src\view.cpp
+	"View.h"
+
