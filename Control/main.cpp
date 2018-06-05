@@ -3,9 +3,10 @@
 using namespace std;
 class Persona{
 public:
+    virtual void info()=0;
+private:
     char* nombre;
     int edad;
-    virtual void info()=0;
 };
 class Varon:public Persona{
 public:
