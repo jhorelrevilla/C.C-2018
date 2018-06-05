@@ -13,6 +13,7 @@ class Pointarray
         void imprime();
         ~Pointarray();
         ///////////////////////////
+    private:
         int tamanio;
         Punto *arr;
 
